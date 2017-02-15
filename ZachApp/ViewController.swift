@@ -8,10 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
+class ViewController: UIViewController
+{
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        self.button1.maskAsCircle()
+        self.button2.maskWithBorder(10, color: UIColor.blue)
+        
+        //self.button2.frame = CGRect(x: 10, y: 10, width: self.button2.frame.size.width, height: self.button2.frame.size.height)
+        
+        self.button2.setPosition(10, y: 10)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

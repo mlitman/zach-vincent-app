@@ -11,4 +11,12 @@ import UIKit
 class MyCustomCell: UICollectionViewCell
 {
     @IBOutlet weak var theLabel: UILabel!
+    var myIndexPath = -1
+    
+    @IBAction func buttonClicked()
+    {
+        print("You clicked me!!!!")
+        self.theLabel.text = "Clicked"
+        Core.vals[myIndexPath] = "Clicked"
+    }
 }

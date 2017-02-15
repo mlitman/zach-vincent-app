@@ -10,9 +10,14 @@ import UIKit
 
 class MyCollectionCVC: UICollectionViewController
 {
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
+        let theLayout = CustomFlowLayout()
+        theLayout.numCols = 3
+        self.collectionView?.collectionViewLayout = theLayout
+        self.collectionView?.backgroundColor = UIColor.white
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -51,18 +56,35 @@ class MyCollectionCVC: UICollectionViewController
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MyCustomCell
     
+        cell.myIndexPath = indexPath.row
+        
         // Configure the cell
-        if(indexPath.row % 2 == 0)
+        if(Core.vals[indexPath.row] != nil)
         {
-            cell.theLabel.text = "blah"
+            cell.theLabel.text = Core.vals[indexPath.row]
         }
         else
         {
-            cell.theLabel.text = "woot"
+            if(indexPath.row % 2 == 0)
+            {
+                Core.vals[indexPath.row] = "blah"
+            }
+            else
+            {
+                Core.vals[indexPath.row] = "woot"
+            }
+            cell.theLabel.text = Core.vals[indexPath.row]
         }
         return cell
     }
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        print("You clicked on button: \(indexPath.row)")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "CellClickedVC") as! CellClickedVC
+        vc.myIndexPath = indexPath.row
+        self.present(vc, animated: true, completion: nil)
+    }
     // MARK: UICollectionViewDelegate
 
     /*
