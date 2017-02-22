@@ -10,6 +10,8 @@ import UIKit
 
 class MyCollectionCVC: UICollectionViewController
 {
+    var myContainer: CollectionViewContainerVC!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -80,11 +82,10 @@ class MyCollectionCVC: UICollectionViewController
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        print("You clicked on button: \(indexPath.row)")
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "CellClickedVC") as! CellClickedVC
-        vc.myIndexPath = indexPath.row
-        self.present(vc, animated: true, completion: nil)
+        //self.myContainer.updateClicks()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MyButtonClicks"), object: nil)
     }
+    
     // MARK: UICollectionViewDelegate
 
     /*

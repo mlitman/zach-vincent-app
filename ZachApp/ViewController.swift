@@ -12,11 +12,14 @@ class ViewController: UIViewController
 {
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
-    
+    @IBOutlet weak var label: UILabel!
+    var clickCount = 0
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(updateClicks), name: NSNotification.Name(rawValue: "MyButtonClicks"), object: nil)
+        
         self.button1.maskAsCircle()
         self.button2.maskWithBorder(10, color: UIColor.blue)
         
@@ -26,6 +29,12 @@ class ViewController: UIViewController
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    func updateClicks()
+    {
+        clickCount += 1
+        self.label.text = "\(clickCount)"
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -33,7 +42,7 @@ class ViewController: UIViewController
 
     @IBAction func buttonPressed()
     {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MyCollectionCVC") as! MyCollectionCVC
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "CollectionViewContainerVC") as! CollectionViewContainerVC
         //do anything with vc prior to showing it on the screen here
         self.present(vc, animated: true) { 
             print("this happens after the screen presents")
