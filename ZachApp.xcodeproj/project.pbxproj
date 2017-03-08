@@ -20,6 +20,7 @@
 		9E1953751E54F0DA0088F083 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1953741E54F0DA0088F083 /* CustomFlowLayout.swift */; };
 		9E1953771E54F6A90088F083 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1953761E54F6A90088F083 /* Core.swift */; };
 		9E1953791E54F7D20088F083 /* CellClickedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1953781E54F7D20088F083 /* CellClickedVC.swift */; };
+		9E8A9AF41E6F7F5800187D28 /* BestHandsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A9AF31E6F7F5800187D28 /* BestHandsTVC.swift */; };
 		9EAACC671E5E283000A9020D /* CollectionViewContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAACC661E5E283000A9020D /* CollectionViewContainerVC.swift */; };
 		9EAACC691E5E2FD000A9020D /* UIViewController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAACC681E5E2FD000A9020D /* UIViewController+Extras.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		9E1953741E54F0DA0088F083 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
 		9E1953761E54F6A90088F083 /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		9E1953781E54F7D20088F083 /* CellClickedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellClickedVC.swift; sourceTree = "<group>"; };
+		9E8A9AF31E6F7F5800187D28 /* BestHandsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestHandsTVC.swift; sourceTree = "<group>"; };
 		9EAACC661E5E283000A9020D /* CollectionViewContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewContainerVC.swift; sourceTree = "<group>"; };
 		9EAACC681E5E2FD000A9020D /* UIViewController+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extras.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +129,7 @@
 				9E1953781E54F7D20088F083 /* CellClickedVC.swift */,
 				9EAACC661E5E283000A9020D /* CollectionViewContainerVC.swift */,
 				9EAACC681E5E2FD000A9020D /* UIViewController+Extras.swift */,
+				9E8A9AF31E6F7F5800187D28 /* BestHandsTVC.swift */,
 			);
 			path = ZachApp;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				9E1953771E54F6A90088F083 /* Core.swift in Sources */,
 				9E17AC681E4BBCEC005D5858 /* MyCustomCell.swift in Sources */,
 				9E1953751E54F0DA0088F083 /* CustomFlowLayout.swift in Sources */,
+				9E8A9AF41E6F7F5800187D28 /* BestHandsTVC.swift in Sources */,
 				9EAACC691E5E2FD000A9020D /* UIViewController+Extras.swift in Sources */,
 				9E1953791E54F7D20088F083 /* CellClickedVC.swift in Sources */,
 				9E17AC381E4BB3C4005D5858 /* AppDelegate.swift in Sources */,
